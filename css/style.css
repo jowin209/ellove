@@ -16,6 +16,8 @@ Button Hover	Slightly Deeper Blue	#7FC8F8 */
     box-sizing: border-box;
 }
 
+img { display: block; }
+
 :root {
     /* Typography */
     --HEADER-FF: "Fredoka", sans-serif;
@@ -24,7 +26,7 @@ Button Hover	Slightly Deeper Blue	#7FC8F8 */
 
     /* Colors */
     --BGCOLOR-PRIMARY: #FDFEFF;
-    --BGCOLOR-SECONDARY: #F4FAFF;
+    --BGCOLOR-SECONDARY: #ff9b9b58;
     --TEXTCOLOR-HEADER: #38475A;
     --TEXTCOLOR-BODY: #6D7C8F;
 }
@@ -42,11 +44,21 @@ body {
 
 header {
     padding: 1em 0.5em;
+
+    background-color:#F4FAFF78;
+    background-image: url('../img/non-gif/Lablab\ -\ Header.webp');
+    background-size: cover;
+    background-position-x: -4px;
+
+    height: 100vh;
+
+    position: relative;
     
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    z-index: -1;
 }
 
 main,
@@ -55,14 +67,19 @@ footer {
     flex-flow: column nowrap;
 }
 
-header,
 footer {
     flex-grow: auto;
-    background-color: var(--BGCOLOR-SECONDARY);
 }
 
 .title {
-    font: 2em var(--TITLE-FF);
+    font: 2em var(--TITLE-FF);.background-translucent {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: 100%;
+}
     font-weight: bold;
 }
 
@@ -77,3 +94,22 @@ h3 {
     color: var(--TEXTCOLOR-HEADER);
 }
 
+.background-header {
+    position: absolute;
+    top: -1em;
+    left: -0.25em;
+    z-index: -1;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.background-translucent {
+    background-color: var(--BGCOLOR-SECONDARY);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: 100%;
+    z-index: -1;
+}
