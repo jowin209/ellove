@@ -31,7 +31,7 @@ img { display: block; }
     --TEXTCOLOR-HEADER: #38475A;
     --TEXTCOLOR-BODY: #6D7C8F;
 
-    --COUNTDOWN-H: 3rem;
+    --COUNTDOWN-H: 3.5rem;
     --COUNTDOWN-COLOR-1: #ff5858;
     --COUNTDOWN-COLOR-2: #ffc8c8;
     --COUNTDOWN-COLOR-3: #F6D5F7;
@@ -60,7 +60,7 @@ header {
     height: 100vh;
 
     position: relative;
-    
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
