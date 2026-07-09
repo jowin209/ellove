@@ -1,12 +1,20 @@
 const countdown = document.getElementById('countdown-monitor');
 
-const daysLeft = {
-    "anniversary": 999,
-    "birthday": 998
+const daysLeft = {}
+
+const specialEventDates = {
+    "anniversary" : {
+        "month": 11,
+        "day": 2
+    },
+    "birthday": {
+        "month": 7, 
+        "day": 12
+    }
 }
 
-
 function countDownCheck() {
+    // Check which date is closer or coming due
     if (daysLeft.anniversary > daysLeft.birthday) {
         return ["your birthday", daysLeft.birthday];
     }
@@ -15,14 +23,38 @@ function countDownCheck() {
     }
 }
 
-
 function setBanner() {
     const [event, days] = countDownCheck();
 
-    countdown.textContent = 
+    // Set banner's text to either 'Today is our anniversary / your birthday!'
+    // Or show many day/s left before our anniversary or her birthday (whichever is closer)
+    countdown.innerText = 
     days === 0 
     ? `Today is ${event}!`
     : `${days} day${days !== 1 ? 's' : ''} left until ${event}!`;
 }
 
+function setDaysLeft() {
+    // Set the number of days left for the upcoming special events
+    for (const [event, date] of Object.entries(specialEventDates)) {
+        let today = new Date();
+        let upcoming = new Date(today.getFullYear(), date.month - 1, date.day);
+
+        today.setHours(0, 0, 0, 0);
+        upcoming.setHours(0, 0, 0, 0);
+
+        // Check if the event has passed already (Program should not count backwards)
+        if (upcoming < today) {
+            upcoming.setFullYear(today.getFullYear() + 1);
+        }
+
+        let gap = upcoming - today;
+        gap = Math.ceil(gap / (1000 * 60 * 60 * 24));
+
+        // Assign the event to the days left (gap)
+        daysLeft[event] = gap;
+    }
+}
+
+setDaysLeft();
 setBanner();
