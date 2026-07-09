@@ -229,7 +229,8 @@ h3 {
 }
 
 .dropdown-select option {
-    font-size: 0.5em;
+    font: 1rem var(--HEADER-FF);
+    background-color: var(--COUNTDOWN-COLOR-1);
 }
 
 .dropdown-select:active, .dropdown-select:focus {
