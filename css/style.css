@@ -16,15 +16,16 @@ img { display: block; }
     --HEADER-FS: 2em;
     --HEADER-PADDING: 0.5em 0.25em;
     --TEXT-SCALE-UP: 2rem;
-    --TEXT-MID: 1rem;
+    --TEXT-MID: 1.5rem;
 
     /* Colors */
     --BGCOLOR-PRIMARY: #FDFEFF;
-    --BGCOLOR-SECONDARY-1: #ede342;
+    --BGCOLOR-SECONDARY-1: #fff95b;
     --BGCOLOR-SECONDARY-2: #ff51eb;
     --TEXTCOLOR-HEADER: #ffffff;
     --TEXTCOLOR-BODY-H: #3A3335;
     --TEXTCOLOR-BODY-P: #6D7C8F;
+    --BG-GRADIENT: linear-gradient(90deg, #F6D5F7, #FBE9D7);
 
     /* Countdown Banner settings */
     --COUNTDOWN-H: 3.5rem;
@@ -38,6 +39,9 @@ img { display: block; }
     --MAIN-TOP-COVER: 15vh;
     --MAIN-TOP-BORDER-W: 12.5px;
     --MAIN-PADDING: 1.5em;
+
+    /* Repeat variables */
+    --BORDER-LINE: 1px solid white;
 }
 
 html {
@@ -48,8 +52,6 @@ html {
 body {
     display: flex;
     flex-flow: column nowrap;
-    min-height: 100vh;
-    background-color: var(--BGCOLOR-PRIMARY);
 }
 
 header {
@@ -68,7 +70,6 @@ header {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    /* z-index: -1; */
 
     animation: scrollBackground 40s linear infinite;
 }
@@ -87,7 +88,6 @@ header {
     :root {
         --HEADER-PADDING: 0.5em 2em;
         --TEXT-SCALE-UP: 275%;
-        --TEXT-MID: 1.5rem;
     }
     header {
         background-position: center center;
@@ -107,27 +107,27 @@ footer {
 }
 
 footer {
-    z-index: 1;
     position: static;
 
-    /* TODO: Update this appropriately */
-    background-color: black;
-    color: white;
+    background: var(--COUNTDOWN-COLOR-1) linear-gradient(to right, var(--COUNTDOWN-COLOR-1), var(--COUNTDOWN-COLOR-2), var(--COUNTDOWN-COLOR-3), var(--COUNTDOWN-COLOR-4));
+    text-align: right;
+    padding: 0.5em 1em;
+    border-top: var(--BORDER-LINE);
 }
 
 main {
     padding-left: var(--MAIN-PADDING);
     padding-right: var(--MAIN-PADDING);
     padding-top: 3.75em;
-    background-color: var(--BGCOLOR-PRIMARY);
+    background: #F6D5F7 var(--BG-GRADIENT);
     border-top: var(--MAIN-TOP-BORDER-W) solid var(--COUNTDOWN-COLOR-1);
 
     border-radius: var(--MAIN-TOP-RADIUS) var(--MAIN-TOP-RADIUS) 0 0;
-    height: 100vh; /* TODO: Update this to not be hard-coded */
+    min-height: 100vh; /* TODO: Update this to not be hard-coded */
     width: 100%;
+    z-index: 1;
 
-    position: relative;
-    top: calc(var(--MAIN-TOP-COVER) * -1);
+    margin-top: calc(var(--MAIN-TOP-COVER) * -1);
 }
 
 h1,
@@ -185,8 +185,8 @@ h3 {
     width: 100%;
     height: var(--COUNTDOWN-H);
 
-    background: linear-gradient(to right, var(--COUNTDOWN-COLOR-1), var(--COUNTDOWN-COLOR-2), var(--COUNTDOWN-COLOR-3), var(--COUNTDOWN-COLOR-4));
-    border-bottom: 0.25px solid white;
+    background: var(--COUNTDOWN-COLOR-1) linear-gradient(to right, var(--COUNTDOWN-COLOR-1), var(--COUNTDOWN-COLOR-2), var(--COUNTDOWN-COLOR-3), var(--COUNTDOWN-COLOR-4));
+    border-bottom: var(--BORDER-LINE);
     z-index: 1;
 }
 
