@@ -26,9 +26,16 @@ img { display: block; }
 
     /* Colors */
     --BGCOLOR-PRIMARY: #FDFEFF;
-    --BGCOLOR-SECONDARY: #ff9b9b58;
+    --BGCOLOR-SECONDARY-1: #ff9b9b;
+    --BGCOLOR-SECONDARY-2: #ff5858;
     --TEXTCOLOR-HEADER: #38475A;
     --TEXTCOLOR-BODY: #6D7C8F;
+
+    --COUNTDOWN-H: 3rem;
+    --COUNTDOWN-COLOR-1: #ff5858;
+    --COUNTDOWN-COLOR-2: #ffc8c8;
+    --COUNTDOWN-COLOR-3: #F6D5F7;
+    --COUNTDOWN-COLOR-4: #FBE9D7;
 }
 
 html {
@@ -69,7 +76,7 @@ footer {
 
 footer {
     flex-grow: auto;
-}
+}rgb(236, 183, 183),
 
 main {
     flex-grow: 10;
@@ -91,11 +98,23 @@ h3 {
 }
 
 .background-translucent {
-    background-color: var(--BGCOLOR-SECONDARY);
+    background: radial-gradient(var(--BGCOLOR-SECONDARY-1), var(--BGCOLOR-SECONDARY-2));
+    opacity: 31.25%;
     position: absolute;
     top: 0;
     left: 0;
     height: inherit;
     width: 100%;
     z-index: -1;
+}
+
+.countdown {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: var(--COUNTDOWN-H);
+
+    background: linear-gradient(to right, var(--COUNTDOWN-COLOR-1), var(--COUNTDOWN-COLOR-2), var(--COUNTDOWN-COLOR-3), var(--COUNTDOWN-COLOR-4));
 }
