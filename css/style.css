@@ -48,7 +48,7 @@ header {
     background-color:#F4FAFF78;
     background-image: url('../img/non-gif/Lablab\ -\ Header.webp');
     background-size: cover;
-    background-position-x: -4px;
+    background-position: center top;
 
     height: 100vh;
 
@@ -80,11 +80,14 @@ h2,
 h3 {
     font-family: var(--HEADER-FF);
     color: var(--TEXTCOLOR-HEADER);
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .title {
     font: 2em var(--TITLE-FF);
     font-weight: bold;
+    color: black;
 }
 
 .background-translucent {
