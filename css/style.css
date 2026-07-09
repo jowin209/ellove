@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Patrick+Hand&family=Sniglet:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Jua&family=Patrick+Hand&display=swap');
 
 /* Background	Cloud White	#FDFEFF
 Secondary Background	Sky Mist	#F4FAFF
@@ -20,6 +20,7 @@ Button Hover	Slightly Deeper Blue	#7FC8F8 */
     /* Typography */
     --HEADER-FF: "Fredoka", sans-serif;
     --BODY-FF: "Patrick Hand", cursive;
+    --TITLE-FF: "Jua", sans-serif;
 
     /* Colors */
     --BGCOLOR-PRIMARY: #FDFEFF;
@@ -39,7 +40,15 @@ body {
     background-color: var(--BGCOLOR-PRIMARY);
 }
 
-header,
+header {
+    padding: 1em 0.5em;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
 main,
 footer {
     display: flex;
@@ -50,6 +59,11 @@ header,
 footer {
     flex-grow: auto;
     background-color: var(--BGCOLOR-SECONDARY);
+}
+
+.title {
+    font: 2em var(--TITLE-FF);
+    font-weight: bold;
 }
 
 main {
