@@ -33,8 +33,7 @@ img { display: block; }
     --BGCOLOR-SECONDARY-1: #ede342;
     --BGCOLOR-SECONDARY-2: #ff51eb;
     --TEXTCOLOR-HEADER: #fce9ef;
-    --TEXTCOLOR-HEADER-LIGHT: #ffffff;
-    --TEXTCOLOR-BODY-H: #6D7C8F;
+    --TEXTCOLOR-BODY-H: #3A3335;
     --TEXTCOLOR-BODY-P: #6D7C8F;
 
     /* Countdown Banner settings */
@@ -48,10 +47,12 @@ img { display: block; }
     --MAIN-TOP-RADIUS: 5rem;
     --MAIN-TOP-COVER: 15vh;
     --MAIN-TOP-BORDER-W: 12.5px;
+    --MAIN-PADDING: 1.5em;
 }
 
 html {
     font: 1rem var(--BODY-FF);
+    color: var(--TEXTCOLOR-BODY-H);
 }
 
 body {
@@ -125,6 +126,8 @@ footer {
 }
 
 main {
+    padding-left: var(--MAIN-PADDING);
+    padding-right: var(--MAIN-PADDING);
     padding-top: 3.75em;
     background-color: var(--BGCOLOR-PRIMARY);
     border-top: var(--MAIN-TOP-BORDER-W) solid var(--COUNTDOWN-COLOR-1);
@@ -141,7 +144,6 @@ h1,
 h2,
 h3 {
     font-family: var(--HEADER-FF);
-    color: var(--TEXTCOLOR-HEADER);
     user-select: none;
     -webkit-user-drag: none;
 }
@@ -220,5 +222,5 @@ h3 {
 }
 
 .text-light {
-    color: var(--TEXTCOLOR-HEADER-LIGHT);
+    color: var(--TEXTCOLOR-HEADER);
 }
