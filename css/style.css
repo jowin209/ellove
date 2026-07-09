@@ -26,8 +26,8 @@ img { display: block; }
 
     /* Colors */
     --BGCOLOR-PRIMARY: #FDFEFF;
-    --BGCOLOR-SECONDARY-1: #ff9b9b;
-    --BGCOLOR-SECONDARY-2: #ff5858;
+    --BGCOLOR-SECONDARY-1: #ede342;
+    --BGCOLOR-SECONDARY-2: #ff51eb;
     --TEXTCOLOR-HEADER: #38475A;
     --TEXTCOLOR-BODY: #6D7C8F;
 
@@ -63,8 +63,8 @@ header {
     position: relative;
 
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
     align-items: flex-start;
     z-index: -1;
 }
@@ -102,6 +102,8 @@ h3 {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
+
+    flex: auto;
 }
 
 .title {
@@ -144,4 +146,9 @@ h3 {
 .dance {
     width: auto;
     height: 4rem;
+}
+
+.title-message {
+    align-self: center;
+    flex-grow: 1;
 }
