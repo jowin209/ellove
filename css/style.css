@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Patrick+Hand&family=Sniglet:wght@400;800&display=swap');
+
+/* Background	Cloud White	#FDFEFF
+Secondary Background	Sky Mist	#F4FAFF
+Primary Accent	Cinnamoroll Blue	#9FD8FF
+Secondary Accent	Soft Blue	#CDEEFF
+Cute Accent	Baby Pink	#FFDCE8
+Highlight	Cream	#FFF7E8
+Main Text	Dark Slate	#38475A
+Secondary Text	Gray Blue	#6D7C8F
+Button Hover	Slightly Deeper Blue	#7FC8F8 */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Typography */
+    --HEADER-FF: "Fredoka", sans-serif;
+    --BODY-FF: "Patrick Hand", cursive;
+
+    /* Colors */
+    --BGCOLOR-PRIMARY: #FDFEFF;
+    --BGCOLOR-SECONDARY: #F4FAFF;
+    --TEXTCOLOR-HEADER: #38475A;
+    --TEXTCOLOR-BODY: #6D7C8F;
+}
+
+html {
+    font: 1rem var(--BODY-FF);
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    background-color: var(--BGCOLOR-PRIMARY);
+}
+
+header,
+main,
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header,
+footer {
+    flex-grow: auto;
+    background-color: var(--BGCOLOR-SECONDARY);
+}
+
+main {
+    flex-grow: 10;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--HEADER-FF);
+    color: var(--TEXTCOLOR-HEADER);
+}
+
