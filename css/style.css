@@ -23,13 +23,19 @@ img { display: block; }
     --HEADER-FF: "Fredoka", sans-serif;
     --BODY-FF: "Patrick Hand", cursive;
     --TITLE-FF: "Jua", sans-serif;
+    --HEADER-FS: 2em;
+    --HEADER-PADDING: 0.5em 0.25em;
+    --TEXT-SCALE-UP: 2rem;
+    --TEXT-MID: 1rem;
 
     /* Colors */
     --BGCOLOR-PRIMARY: #FDFEFF;
     --BGCOLOR-SECONDARY-1: #ede342;
     --BGCOLOR-SECONDARY-2: #ff51eb;
-    --TEXTCOLOR-HEADER: #38475A;
-    --TEXTCOLOR-BODY: #6D7C8F;
+    --TEXTCOLOR-HEADER: #fce9ef;
+    --TEXTCOLOR-HEADER-LIGHT: #ffffff;
+    --TEXTCOLOR-BODY-H: #6D7C8F;
+    --TEXTCOLOR-BODY-P: #6D7C8F;
 
     /* Countdown Banner settings */
     --COUNTDOWN-H: 3.5rem;
@@ -40,7 +46,7 @@ img { display: block; }
 
     /* Main Container */
     --MAIN-TOP-RADIUS: 5rem;
-    --MAIN-TOP-COVER: 10vh;
+    --MAIN-TOP-COVER: 15vh;
     --MAIN-TOP-BORDER-W: 12.5px;
 }
 
@@ -56,7 +62,7 @@ body {
 }
 
 header {
-    padding: 1em 0.5em;
+    padding: 0.5em 1em;
 
     background-color:#F4FAFF78;
     background-image: url('../img/non-gif/Lablab\ -\ Header.webp');
@@ -87,11 +93,11 @@ header {
 
 /* Positioned here to only need to update the vars */
 @media screen and (min-width: 640px) {
-    /* :root {
-        --MAIN-TOP-RADIUS: 4.5rem;
-        --MAIN-TOP-COVER: 7.5vh;
-    } */
-
+    :root {
+        --HEADER-PADDING: 0.5em 2em;
+        --TEXT-SCALE-UP: 275%;
+        --TEXT-MID: 1.5rem;
+    }
     header {
         background-position: center center;
     }
@@ -119,7 +125,7 @@ footer {
 }
 
 main {
-    padding-top: 5em;
+    padding-top: 3.75em;
     background-color: var(--BGCOLOR-PRIMARY);
     border-top: var(--MAIN-TOP-BORDER-W) solid var(--COUNTDOWN-COLOR-1);
 
@@ -144,7 +150,7 @@ h3 {
     margin-top: var(--COUNTDOWN-H);
     width: 100%;
     height: calc(inherit - var(--COUNTDOWN-H));
-    padding: 0.5em 1em;
+    padding: var(--HEADER-PADDING);
 
     display: flex;
     flex-flow: row nowrap;
@@ -155,14 +161,13 @@ h3 {
 }
 
 .title {
-    font: 2em var(--TITLE-FF);
+    font-size: var(--HEADER-FS);
     font-weight: bold;
-    color: black;
 }
 
 .background-translucent {
     background: radial-gradient(var(--BGCOLOR-SECONDARY-1), var(--BGCOLOR-SECONDARY-2));
-    opacity: 31.25%;
+    opacity: 32.25%;
 
     position: absolute;
     top: 0;
@@ -197,8 +202,23 @@ h3 {
     height: 4rem;
 }
 
-.title-message {
+.text-message {
     align-self: center;
-    flex-grow: 2;
+    flex-grow: 3;
 }
 
+.scale-text {
+    font-size: var(--TEXT-SCALE-UP);
+}
+
+.font-normal {
+    font-size: var(--TEXT-MID);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-light {
+    color: var(--TEXTCOLOR-HEADER-LIGHT);
+}
