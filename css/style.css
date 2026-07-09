@@ -60,7 +60,7 @@ header {
 
     background-color:#F4FAFF78;
     background-image: url('../img/non-gif/Lablab\ -\ Header.webp');
-    background-size: cover;
+    background-size: auto 100%;
     background-repeat: repeat-x;
 
     height: 100vh;
@@ -81,7 +81,7 @@ header {
         background-position: 0 0;
     }
     to {
-        background-position-x: -1000%;
+        background-position-x: -2000px;
     }
 }
 
@@ -114,7 +114,7 @@ footer {
     position: static;
 
     /* TODO: Update this appropriately */
-    background-color: black; 
+    background-color: black;
     color: white;
 }
 
@@ -124,7 +124,7 @@ main {
     border-top: var(--MAIN-TOP-BORDER-W) solid var(--COUNTDOWN-COLOR-1);
 
     border-radius: var(--MAIN-TOP-RADIUS) var(--MAIN-TOP-RADIUS) 0 0;
-    height: 100vh;
+    height: 100vh; /* TODO: Update this to not be hard-coded */
     width: 100%;
 
     position: relative;
@@ -189,6 +189,7 @@ h3 {
 
     background: linear-gradient(to right, var(--COUNTDOWN-COLOR-1), var(--COUNTDOWN-COLOR-2), var(--COUNTDOWN-COLOR-3), var(--COUNTDOWN-COLOR-4));
     border-bottom: 0.25px solid white;
+    z-index: 1;
 }
 
 .dance {
