@@ -31,6 +31,7 @@ img { display: block; }
     --TEXTCOLOR-HEADER: #38475A;
     --TEXTCOLOR-BODY: #6D7C8F;
 
+    /* Countdown Banner settings */
     --COUNTDOWN-H: 3.5rem;
     --COUNTDOWN-COLOR-1: #ff5858;
     --COUNTDOWN-COLOR-2: #ffc8c8;
@@ -113,8 +114,19 @@ h3 {
     top: 0;
     left: 0;
 
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
     width: 100%;
     height: var(--COUNTDOWN-H);
 
     background: linear-gradient(to right, var(--COUNTDOWN-COLOR-1), var(--COUNTDOWN-COLOR-2), var(--COUNTDOWN-COLOR-3), var(--COUNTDOWN-COLOR-4));
+}
+
+.dance {
+    width: auto;
+    height: 4rem;
 }
