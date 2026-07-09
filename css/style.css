@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Jua&family=Patrick+Hand&display=swap');
 
-/* Background	Cloud White	#FDFEFF
-Secondary Background	Sky Mist	#F4FAFF
-Primary Accent	Cinnamoroll Blue	#9FD8FF
-Secondary Accent	Soft Blue	#CDEEFF
-Cute Accent	Baby Pink	#FFDCE8
-Highlight	Cream	#FFF7E8
-Main Text	Dark Slate	#38475A
-Secondary Text	Gray Blue	#6D7C8F
-Button Hover	Slightly Deeper Blue	#7FC8F8 */
-
 * {
     padding: 0;
     margin: 0;
@@ -32,7 +22,7 @@ img { display: block; }
     --BGCOLOR-PRIMARY: #FDFEFF;
     --BGCOLOR-SECONDARY-1: #ede342;
     --BGCOLOR-SECONDARY-2: #ff51eb;
-    --TEXTCOLOR-HEADER: #fce9ef;
+    --TEXTCOLOR-HEADER: #ffffff;
     --TEXTCOLOR-BODY-H: #3A3335;
     --TEXTCOLOR-BODY-P: #6D7C8F;
 
@@ -78,7 +68,7 @@ header {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    z-index: -1;
+    /* z-index: -1; */
 
     animation: scrollBackground 40s linear infinite;
 }
@@ -169,15 +159,16 @@ h3 {
 
 .background-translucent {
     background: radial-gradient(var(--BGCOLOR-SECONDARY-1), var(--BGCOLOR-SECONDARY-2));
-    opacity: 32.25%;
+    opacity: 20%;
 
     position: absolute;
     top: 0;
     left: 0;
+    pointer-events: none;
 
     height: inherit;
     width: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 .countdown {
@@ -223,4 +214,24 @@ h3 {
 
 .text-light {
     color: var(--TEXTCOLOR-HEADER);
+}
+
+.dropdown-select {
+    font: var(--HEADER-FS) var(--HEADER-FF);
+    border: 2px solid var(--BGCOLOR-SECONDARY-2);
+    border-radius: 0.5em;
+    width: 3.75em;
+
+    font-weight: bold;
+    background-color: transparent;
+    text-align: center;
+    appearance: none;
+}
+
+.dropdown-select option {
+    font-size: 0.5em;
+}
+
+.dropdown-select:active, .dropdown-select:focus {
+    border: 2px solid var(--BGCOLOR-SECONDARY-1);
 }

@@ -1,4 +1,6 @@
 const countdown = document.getElementById('countdown-monitor');
+const baby = document.getElementsByClassName('baby');
+const call_signs = document.querySelector('select.dropdown-select');
 
 const daysLeft = {}
 
@@ -8,7 +10,7 @@ const specialEventDates = {
         "day": 2
     },
     "birthday": {
-        "month": 7, 
+        "month": 7,
         "day": 12
     }
 }
@@ -28,8 +30,8 @@ function setBanner() {
 
     // Set banner's text to either 'Today is our anniversary / your birthday!'
     // Or show many day/s left before our anniversary or her birthday (whichever is closer)
-    countdown.innerText = 
-    days === 0 
+    countdown.innerText =
+    days === 0
     ? `Today is ${event}!`
     : `${days} day${days !== 1 ? 's' : ''} left until ${event}!`;
 }
@@ -58,3 +60,12 @@ function setDaysLeft() {
 
 setDaysLeft();
 setBanner();
+
+call_signs.addEventListener('change', (event) => {
+    const newValue = event.target.value;
+
+    // Update each instance of class baby to be updated to the value of call_signs
+    for (b of baby) {
+        b.innerText = newValue;
+    }
+})
