@@ -71,18 +71,6 @@ footer {
     flex-grow: auto;
 }
 
-.title {
-    font: 2em var(--TITLE-FF);.background-translucent {
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: inherit;
-    width: 100%;
-}
-    font-weight: bold;
-}
-
 main {
     flex-grow: 10;
 }
@@ -94,14 +82,9 @@ h3 {
     color: var(--TEXTCOLOR-HEADER);
 }
 
-.background-header {
-    position: absolute;
-    top: -1em;
-    left: -0.25em;
-    z-index: -1;
-
-    width: 100%;
-    height: 100vh;
+.title {
+    font: 2em var(--TITLE-FF);
+    font-weight: bold;
 }
 
 .background-translucent {
