@@ -80,6 +80,9 @@ for (const question of questions) {
         // Toggle d-none class to unhide/hide the answer
         answer.classList.toggle('d-none');
 
+        // Make the question connect with the answer by removing bottom radius
+        question.classList.toggle('no-radius-bottom');
+
         // Used 'anti' for clarity of selecting not self
         for (const anti_question of questions) {
             if (anti_question !== current) {

@@ -225,7 +225,6 @@ h3 {
     display: flex;
     flex-flow: column nowrap;
 
-    border: var(--BORDER-LINE);
     user-select: none;
 }
 
@@ -244,6 +243,8 @@ h3 {
     background-color: var(--COUNTDOWN-COLOR-2);
     padding: var(--MAIN-PADDING-SM);
     color: var(--TEXTCOLOR-BODY);
+    border-radius: 0 0 0.5em 0.5em;
+    border-top: var(--BORDER-LINE);
 }
 
 .question:hover {
@@ -295,6 +296,10 @@ h3 {
 
 .gap-top {
     margin-top: 1em;
+}
+
+.no-radius-bottom {
+    border-radius: 0.5em 0.5em 0 0;
 }
 
 /* Images */
