@@ -327,7 +327,7 @@ h3 {
 /* Letter */
 
 .letter {
-    position: absolute; 
+    position: absolute;
 
     width: 100%;
     height: 100vh;
@@ -342,11 +342,21 @@ h3 {
 
     border: var(--BORDER-LINE);
     border-radius: 0.5em;
-    padding: var(--MAIN-PADDING);
+    padding: 0 var(--MAIN-PADDING);
 
     margin-top: var(--COUNTDOWN-H);
     width: 80%;
     height: 80vh;
+
+    overflow: scroll;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.letter-content p {
+    margin: 1em auto;
+    line-height: 1.5em;
 }
 
 /* My classes */
