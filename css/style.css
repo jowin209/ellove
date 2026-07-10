@@ -13,7 +13,7 @@ img { display: block; }
     --HEADER-FF: "Fredoka", sans-serif;
     --BODY-FF: "Patrick Hand", cursive;
     --TITLE-FF: "Jua", sans-serif;
-    --HEADER-FS: 2em;
+    --HEADER-FS: 1.5em;
     --HEADER-PADDING: 0.5em 0.25em;
     --TEXT-SCALE-UP: 2rem;
     --TEXT-MID: 1.5rem;
@@ -45,7 +45,7 @@ img { display: block; }
 }
 
 html {
-    font: 1rem var(--BODY-FF);
+    font: 1.25rem var(--BODY-FF);
     color: var(--TEXTCOLOR-BODY-H);
 }
 
@@ -86,6 +86,7 @@ header {
 /* Positioned here to only need to update the vars */
 @media screen and (min-width: 640px) {
     :root {
+        --HEADER-FS: 2em;
         --HEADER-PADDING: 0.5em 2em;
         --TEXT-SCALE-UP: 275%;
     }
@@ -187,7 +188,7 @@ h3 {
 
     background: var(--COUNTDOWN-COLOR-1) linear-gradient(to right, var(--COUNTDOWN-COLOR-1), var(--COUNTDOWN-COLOR-2), var(--COUNTDOWN-COLOR-3), var(--COUNTDOWN-COLOR-4));
     border-bottom: var(--BORDER-LINE);
-    z-index: 1;
+    z-index: 999; /* Always on top */
 }
 
 .dance {
@@ -235,4 +236,8 @@ h3 {
 
 .dropdown-select:active, .dropdown-select:focus {
     border: 2px solid var(--BGCOLOR-SECONDARY-1);
+}
+
+.paragraph {
+    padding: 1em 0 0;
 }
