@@ -45,6 +45,7 @@ img { display: block; }
     --BORDER-LINE: 1px solid white;
 }
 
+/* General tags */
 html {
     font: 1.25rem var(--BODY-FF);
     color: var(--TEXTCOLOR-BODY);
@@ -84,6 +85,7 @@ header {
     }
 }
 
+/* Media queries */
 /* Positioned here to only need to update the vars */
 @media screen and (min-width: 640px) {
     :root {
