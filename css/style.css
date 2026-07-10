@@ -41,6 +41,11 @@ img { display: block; }
     --MAIN-PADDING-SM: 1em;
     --MAIN-PADDING-XS: 0.75em;
 
+    /* Card */
+    --CARD-GROUP-FLOW: column nowrap;
+    --CARD-FLOW: row nowrap;
+    --CARD-MIN-H: auto;
+
     /* Repeat variables */
     --BORDER-LINE: 1px solid white;
 }
@@ -97,6 +102,10 @@ header {
         --HEADER-FS: 2em;
         --HEADER-PADDING: 0.5em 2em;
         --TEXT-SCALE-UP: 275%;
+
+        --CARD-GROUP-FLOW: row wrap;
+        --CARD-FLOW: column nowrap;
+        --CARD-MIN-H: 25rem;
     }
     header {
         background-position: center center;
@@ -221,25 +230,26 @@ h3 {
 }
 
 .why-cinnamoroll {
-    width: 100%;
-    min-height: 25vh;
+    max-width: 100%;
 
     display: flex;
-    flex-flow: column nowrap;
+    justify-content: center;
+    flex-flow: var(--CARD-GROUP-FLOW);
     gap: 1em;
-
-    background: var(--BGCOLOR-PRIMARY); /* TODO: Remove later */
 }
 
 .cinnamoroll-card {
-    background-color: black;
-    min-height: 2em;
+    background: var(--COUNTDOWN-COLOR-2) linear-gradient(to right, var(--COUNTDOWN-COLOR-2), var(--COUNTDOWN-COLOR-3));
+    padding: var(--MAIN-PADDING);
+    border: var(--BORDER-LINE);
+    border-radius: 1em;
+    min-height: var(--CARD-MIN-H);
 
     display: flex;
+    flex-flow: var(--CARD-FLOW);
     justify-content: flex-start;
     align-items: center;
     gap: 1em;
-    padding: var(--MAIN-PADDING);
 }
 
 .card-image {
