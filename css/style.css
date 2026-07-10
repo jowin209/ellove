@@ -23,8 +23,7 @@ img { display: block; }
     --BGCOLOR-SECONDARY-1: #fff95b;
     --BGCOLOR-SECONDARY-2: #ff51eb;
     --TEXTCOLOR-HEADER: #ffffff;
-    --TEXTCOLOR-BODY-H: #3A3335;
-    --TEXTCOLOR-BODY-P: #6D7C8F;
+    --TEXTCOLOR-BODY: #3A3335;
     --BG-GRADIENT: linear-gradient(90deg, #F6D5F7, #FBE9D7);
 
     /* Countdown Banner settings */
@@ -40,6 +39,7 @@ img { display: block; }
     --MAIN-TOP-BORDER-W: 12.5px;
     --MAIN-PADDING: 1.5em;
     --MAIN-PADDING-SM: 1em;
+    --MAIN-PADDING-XS: 0.75em;
 
     /* Repeat variables */
     --BORDER-LINE: 1px solid white;
@@ -47,7 +47,7 @@ img { display: block; }
 
 html {
     font: 1.25rem var(--BODY-FF);
-    color: var(--TEXTCOLOR-BODY-H);
+    color: var(--TEXTCOLOR-BODY);
 }
 
 body {
@@ -192,11 +192,6 @@ h3 {
     z-index: 999; /* Always on top */
 }
 
-.dance {
-    width: auto;
-    height: 4rem;
-}
-
 .dropdown-select {
     font: var(--HEADER-FS) var(--HEADER-FF);
     border: 2px solid var(--BGCOLOR-SECONDARY-2);
@@ -224,6 +219,12 @@ h3 {
     flex-flow: column nowrap;
 }
 
+.qa-group {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+}
+
 .question {
     background-color: var(--COUNTDOWN-COLOR-1);
     border: var(--BORDER-LINE);
@@ -233,6 +234,12 @@ h3 {
 
     display: flex;
     justify-content: space-between;
+}
+
+.answer {
+    background-color: var(--COUNTDOWN-COLOR-2);
+    padding: var(--MAIN-PADDING-XS);
+    color: var(--TEXTCOLOR-BODY);
 }
 
 .question:hover {
@@ -285,4 +292,11 @@ h3 {
 
 .gap-top {
     margin-top: 1em;
+}
+
+/* Images */
+
+.dance {
+    width: auto;
+    height: 4rem;
 }
