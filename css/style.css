@@ -39,6 +39,7 @@ img { display: block; }
     --MAIN-TOP-COVER: 15vh;
     --MAIN-TOP-BORDER-W: 12.5px;
     --MAIN-PADDING: 1.5em;
+    --MAIN-PADDING-SM: 1em;
 
     /* Repeat variables */
     --BORDER-LINE: 1px solid white;
@@ -196,27 +197,6 @@ h3 {
     height: 4rem;
 }
 
-.text-message {
-    align-self: center;
-    flex-grow: 3;
-}
-
-.scale-text {
-    font-size: var(--TEXT-SCALE-UP);
-}
-
-.font-normal {
-    font-size: var(--TEXT-MID);
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-light {
-    color: var(--TEXTCOLOR-HEADER);
-}
-
 .dropdown-select {
     font: var(--HEADER-FS) var(--HEADER-FF);
     border: 2px solid var(--BGCOLOR-SECONDARY-2);
@@ -238,6 +218,71 @@ h3 {
     border: 2px solid var(--BGCOLOR-SECONDARY-1);
 }
 
+.faq {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.question {
+    background-color: var(--COUNTDOWN-COLOR-1);
+    border: var(--BORDER-LINE);
+    border-radius: 0.5em;
+    padding: var(--MAIN-PADDING-SM);
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.question:hover {
+    cursor: pointer;
+}
+
+
+.dropdown-icon {
+    transform: rotate(90deg);
+    border: none;
+    background-color: transparent;
+    font: inherit;
+    color: inherit;
+}
+
+/* My classes */
+
 .paragraph {
     padding: 1em 0 0;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.text-message {
+    align-self: center;
+    flex-grow: 3;
+}
+
+.scale-text {
+    font-size: var(--TEXT-SCALE-UP);
+}
+
+.font-normal {
+    font-size: var(--TEXT-MID);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-light {
+    color: var(--TEXTCOLOR-HEADER);
+}
+
+.gap-top {
+    margin-top: 1em;
 }
