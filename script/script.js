@@ -90,6 +90,7 @@ for (const question of questions) {
                 const anti_answer = anti_qa_group.querySelector('.answer');
 
                 anti_answer.classList.add('d-none');
+                anti_question.classList.remove('no-radius-bottom');
             }
         }
     })
