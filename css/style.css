@@ -354,6 +354,13 @@ h3 {
     -ms-overflow-style: none;
 }
 
+.unavailable {
+    font-size: 3rem;
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+}
+
 .letter-content p {
     margin: 1em auto;
     line-height: 1.5em;
@@ -411,4 +418,8 @@ h3 {
 .dance {
     width: auto;
     height: 4rem;
+}
+
+.transparent {
+    color: transparent;
 }
