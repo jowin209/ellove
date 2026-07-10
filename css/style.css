@@ -105,7 +105,7 @@ header {
 
         --CARD-GROUP-FLOW: row wrap;
         --CARD-FLOW: column nowrap;
-        --CARD-MIN-H: 25rem;
+        --CARD-MIN-H: 20rem;
     }
     header {
         background-position: center center;
@@ -238,6 +238,7 @@ h3 {
     gap: 1em;
 }
 
+
 .cinnamoroll-card {
     background: var(--COUNTDOWN-COLOR-2) linear-gradient(to right, var(--COUNTDOWN-COLOR-2), var(--COUNTDOWN-COLOR-3));
     padding: var(--MAIN-PADDING);
@@ -252,13 +253,31 @@ h3 {
     gap: 1em;
 }
 
+
+.cinnamoroll-card h3 {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
 .card-image {
-    /* Temp */
+    position: relative;
     width: 10rem;
     height: auto;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background-color: white;
+    background: var(--BGCOLOR-SECONDARY-1) radial-gradient(var(--COUNTDOWN-COLOR-4), var(--BGCOLOR-SECONDARY-1));
+    border: var(--BORDER-LINE);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img{
+    position: absolute;
+    width: 250px;
+    height: auto;
 }
 
 .faq {
