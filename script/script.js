@@ -1,6 +1,7 @@
 const countdown = document.getElementById('countdown-monitor');
 const baby = document.getElementsByClassName('baby');
 const call_signs = document.querySelector('select.dropdown-select');
+const questions = document.getElementsByClassName('question');
 
 const daysLeft = {}
 
@@ -69,3 +70,24 @@ call_signs.addEventListener('change', (event) => {
         b.innerText = newValue;
     }
 })
+
+for (const question of questions) {
+    question.addEventListener('click', (event) => {
+        const current = event.currentTarget;
+        const qa_group = current.parentElement;
+        const answer = qa_group.querySelector('.answer');
+
+        // Toggle d-none class to unhide/hide the answer
+        answer.classList.toggle('d-none');
+
+        // Used 'anti' for clarity of selecting not self
+        for (const anti_question of questions) {
+            if (anti_question !== current) {
+                const anti_qa_group = anti_question.parentElement;
+                const anti_answer = anti_qa_group.querySelector('.answer');
+
+                anti_answer.classList.add('d-none');
+            }
+        }
+    })
+}
