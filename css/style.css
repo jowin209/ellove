@@ -242,7 +242,7 @@ h3 {
 
 .answer {
     background-color: var(--COUNTDOWN-COLOR-2);
-    padding: var(--MAIN-PADDING-XS);
+    padding: var(--MAIN-PADDING-SM);
     color: var(--TEXTCOLOR-BODY);
 }
 
