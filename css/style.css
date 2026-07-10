@@ -298,6 +298,10 @@ h3 {
     margin-top: 1em;
 }
 
+.gap-bottom {
+    margin-bottom: 1em;
+}
+
 .no-radius-bottom {
     border-radius: 0.5em 0.5em 0 0;
 }
