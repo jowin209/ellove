@@ -225,8 +225,8 @@ h3 {
     display: flex;
     flex-flow: column nowrap;
 
-    /* TEMP */
     border: var(--BORDER-LINE);
+    user-select: none;
 }
 
 .question {
