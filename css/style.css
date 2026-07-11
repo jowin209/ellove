@@ -44,6 +44,7 @@ img { display: block; }
     /* Card */
     --CARD-GROUP-FLOW: column nowrap;
     --CARD-FLOW: row nowrap;
+    --CARD-FLOW-EVEN: row-reverse nowrap;
     --CARD-MIN-H: auto;
 
     /* Repeat variables */
@@ -106,6 +107,7 @@ header {
         --CARD-GROUP-FLOW: row wrap;
         --CARD-FLOW: column nowrap;
         --CARD-MIN-H: 20rem;
+        --CARD-FLOW-EVEN: var(--CARD-FLOW);
     }
     header {
         background-position: center center;
@@ -250,6 +252,11 @@ h3 {
     justify-content: flex-start;
     align-items: center;
     gap: 1.5em;
+}
+
+/* Row-reverse for even elements */
+.cinnamoroll-card:nth-child(even) {
+    flex-flow: var(--CARD-FLOW-EVEN);
 }
 
 
