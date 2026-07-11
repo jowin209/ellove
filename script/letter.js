@@ -1,7 +1,7 @@
 const letterContent = document.querySelector(".letter-content");
 const cinnamorollCards = document.querySelector(".why-cinnamoroll");
 
-const unlockDate = new Date("2026-07-12T00:00:00"); // TODO: Make sure to set this to the correct date.
+const unlockDate = new Date("2026-07-12T00:00:00");
 const now = new Date();
 
 if (now < unlockDate) {

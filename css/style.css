@@ -422,3 +422,7 @@ h3 {
 .transparent {
     color: transparent;
 }
+
+.baby {
+    color: var(--COUNTDOWN-COLOR-1);
+}
