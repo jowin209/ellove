@@ -250,7 +250,7 @@ h3 {
     flex-flow: var(--CARD-FLOW);
     justify-content: flex-start;
     align-items: center;
-    gap: 1em;
+    gap: 1.5em;
 }
 
 
