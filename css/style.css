@@ -356,7 +356,7 @@ h3 {
 .unavailable {
     font-size: 3rem;
     text-align: center;
-    color: red;
+    color: var(--COUNTDOWN-COLOR-1);
     font-weight: bolder;
 }
 
